@@ -2,6 +2,7 @@
 
 <h1><?php wp_title(''); ?></h1>
 
+<!-- The Loop -->
 <?php if ( have_posts() ) : ?>
     <?php while( have_posts() ) : ?>
         <?php the_post(); ?>
@@ -22,5 +23,6 @@
         </article>
     <?php endwhile; ?>
 <?php endif; ?>
+<!-- End Of Loop -->
 
 <?php get_footer(); ?>

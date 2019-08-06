@@ -12,7 +12,9 @@
 
         <header>
             <div class="header-container">
+                <div class="description">
                 <h1><?php bloginfo( 'name' ); ?> &mdash; <?php bloginfo( 'description' );?></h1>
+                </div>
                 <?php
                     wp_nav_menu( array(
                         'theme_location' => 'main-navigation',

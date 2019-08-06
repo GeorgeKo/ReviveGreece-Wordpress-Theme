@@ -9,7 +9,41 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
+:root{
+    --main-color: #917040;
+    --secondary-color: #c4ad8b;
+}
+
+.header-container{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    height: 100px;
+    background-color: var(--main-color) ;
+}
+.description{
+    height: 100%;
+}
 
 #main-navigation{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    margin: 0;
+    padding: 0;
     list-style: none;
+    height: 100%;
+}
+
+#main-navigation li{
+    float: left;
+    padding: 5px;
+    margin: 2px;
+    background-color: var(--secondary-color);
+}
+
+#main-navigation li a{
+    margin: auto;
 }

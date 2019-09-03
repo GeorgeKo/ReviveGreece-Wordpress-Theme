@@ -60,4 +60,20 @@
     }
     add_action( 'wp_enqueue_scripts', 'my_add_theme_style_css' );
 
+
+
+    //Customize Book Sidebar Output
+
+add_filter( 'my_sidebar_output', 'my_widget_filter' );
+function my_widget_filter( $sidebar_output ) { {
+		return array(
+			'posts_per_page' => 10,//set the number you want here 
+			'no_found_rows' => true, 
+			'post_status' => 'publish', 
+			'ignore_sticky_posts' => true,
+			'cat' => 'Book'//the current category id
+			 );
+	}
+    return $sidebar_output;
+}
 ?>

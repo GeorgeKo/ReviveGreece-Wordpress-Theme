@@ -12,7 +12,7 @@
 
         <header>
             <div class="header-container">
-                <h1><?php bloginfo( 'name' ); ?> &mdash; <?php bloginfo( 'description' );?></h1>
+                <a href="<?php echo get_home_url(); ?>"><h1><?php bloginfo( 'name' ); ?> &mdash; <?php bloginfo( 'description' );?></h1></a>
                 <?php
                     wp_nav_menu( array(
                         'theme_location' => 'main-navigation',
@@ -22,6 +22,7 @@
                     ));
                 ?>
             </div>
+            <?php get_search_form(); ?>
         </header>
 
         <div class="main-container">

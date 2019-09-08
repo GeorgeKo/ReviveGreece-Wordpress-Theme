@@ -101,8 +101,8 @@ function custom_post_type() {
  
     // Set UI labels for Custom Post Type
         $labels = array(
-            'name'                => ('Books'),
-            'singular_name'       => ('Book' ),
+            'name'                => ( 'Books' ),
+            'singular_name'       => ( 'Book' ),
             'menu_name'           => ( 'Books' ),
             'parent_item_colon'   => ( 'Parent Book' ),
             'all_items'           => ( 'All Books') ,
@@ -146,7 +146,7 @@ function custom_post_type() {
         );
          
         // Registering your Custom Post Type
-        register_post_type( 'Books', $args );
+        register_post_type( 'books', $args );
      
     }
      

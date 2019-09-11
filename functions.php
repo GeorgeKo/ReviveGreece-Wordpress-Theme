@@ -388,8 +388,8 @@ add_action('save_post', 'Books_save_ISBN_data');
 /************ Taxonomies for Books ***********/
 
  
-// create a custom taxonomy name it "type" for your posts
-function Books_custom_taxonomy() {
+// create a custom taxonomy "Genre"
+function Books_genre_taxonomy() {
  
   $labels = array(
     'name' => 'Genres',
@@ -415,4 +415,34 @@ function Books_custom_taxonomy() {
   ));
 }
 
-add_action( 'init', 'Books_custom_taxonomy' );
+add_action( 'init', 'Books_genre_taxonomy' );
+
+
+// create a custom taxonomy "Publisher"
+function Books_publisher_taxonomy() {
+ 
+    $labels = array(
+      'name' => 'Pulishers',
+      'singular_name' => 'Pulisher',
+      'search_items' =>  'Search Pulishers',
+      'all_items' => 'All Pulishers' ,
+      'parent_item' => 'Parent Pulisher' ,
+      'parent_item_colon' => 'Parent Pulisher:' ,
+      'edit_item' => 'Edit Pulisher' , 
+      'update_item' => 'Update Pulisher' ,
+      'add_new_item' => 'Add New Pulisher' ,
+      'new_item_name' => 'New Pulisher Name' ,
+      'menu_name' => 'Pulisher'
+    ); 	
+   
+    register_taxonomy('pulisher',array('books'), array(
+      'hierarchical' => true,
+      'labels' => $labels,
+      'show_ui' => true,
+      'show_admin_column' => true,
+      'query_var' => true,
+      'rewrite' => array( 'slug' => 'publisher' )
+    ));
+  }
+  
+  add_action( 'init', 'Books_publisher_taxonomy' );

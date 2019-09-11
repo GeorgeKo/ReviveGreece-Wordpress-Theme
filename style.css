@@ -9,6 +9,79 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
+@import url('https://fonts.googleapis.com/css?family=Advent+Pro:400,600&display=swap&subset=greek');
+:root {
+    /* paletton triad-color on #725858 */
+    --light-green: #899276;
+    --med-green: #363c2a;
+    --dark-green: #313c1b;
+    --very-light-brown: #c9adad;
+    --mid-brown: #725858;
+    --dark-brown: #402d2d;
+}
+
+body {
+    margin: 0;
+    font-family: 'Advent Pro', sans-serif;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header-container {
+    width: 100%;
+    display: flex;
+}
+
+.header-logo {
+    width: 30vw;
+    min-width: 100px;
+}
+
+.header-logo img {
+    width: 100%;
+    height: auto;
+}
+
+.menu-main-menu-container {
+    flex-basis: 70%;
+}
+
+.main-navigation {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-navigation .menu-item {
+    text-align: center;
+    height: 40%;
+    margin: .5%;
+    padding: 10px;
+    min-width: 18%;
+    background-color: #899276;
+}
+
+.main-navigation .menu-item a {
+    padding: auto 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
 #main-navigation {
     list-style: none;
+}
+
+.search-form {
+    margin-left: auto;
 }

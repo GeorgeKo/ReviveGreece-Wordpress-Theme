@@ -386,31 +386,33 @@ add_action('save_post', 'Books_save_ISBN_data');
 
 
 /************ Taxonomies for Books ***********/
-add_action( 'init', 'books_ _custom_taxonomy', 0 );
+
  
-//create a custom taxonomy name it "type" for your posts
-function crunchify_create_deals_custom_taxonomy() {
+// create a custom taxonomy name it "type" for your posts
+function Books_custom_taxonomy() {
  
   $labels = array(
-    'name' => _x( 'Types', 'taxonomy general name' ),
-    'singular_name' => _x( 'Type', 'taxonomy singular name' ),
-    'search_items' =>  __( 'Search Types' ),
-    'all_items' => __( 'All Types' ),
-    'parent_item' => __( 'Parent Type' ),
-    'parent_item_colon' => __( 'Parent Type:' ),
-    'edit_item' => __( 'Edit Type' ), 
-    'update_item' => __( 'Update Type' ),
-    'add_new_item' => __( 'Add New Type' ),
-    'new_item_name' => __( 'New Type Name' ),
-    'menu_name' => __( 'Types' ),
+    'name' => 'Genres',
+    'singular_name' => 'Genre',
+    'search_items' =>  'Search Genres',
+    'all_items' => 'All Genres' ,
+    'parent_item' => 'Parent Genre' ,
+    'parent_item_colon' => 'Parent Genre:' ,
+    'edit_item' => 'Edit Genre' , 
+    'update_item' => 'Update Genre' ,
+    'add_new_item' => 'Add New Genre' ,
+    'new_item_name' => 'New Genre Name' ,
+    'menu_name' => 'Genre'
   ); 	
  
-  register_taxonomy('types',array('deals'), array(
+  register_taxonomy('genre',array('books'), array(
     'hierarchical' => true,
     'labels' => $labels,
     'show_ui' => true,
     'show_admin_column' => true,
     'query_var' => true,
-    'rewrite' => array( 'slug' => 'type' ),
+    'rewrite' => array( 'slug' => 'genre' )
   ));
 }
+
+add_action( 'init', 'Books_custom_taxonomy' );

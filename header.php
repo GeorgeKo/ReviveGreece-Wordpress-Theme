@@ -14,7 +14,7 @@
 
     <header>
         <div class="header-container">
-            <a href="<?php echo get_home_url(); ?>"><?php
+            <a class="header-logo" href="<?php echo get_home_url(); ?>"><?php
                                                     $custom_logo_id = get_theme_mod('custom_logo');
                                                     $image = wp_get_attachment_image_src($custom_logo_id, 'full');
                                                     ?>
@@ -31,7 +31,7 @@
             ));
             ?>
         </div>
-        <?php get_search_form(); ?>
+        <div class="search-form"><?php get_search_form(); ?></div>
     </header>
 
     <div class="main-container">

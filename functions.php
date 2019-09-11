@@ -389,7 +389,7 @@ add_action('save_post', 'Books_save_ISBN_data');
 
  
 // create a custom taxonomy "Genre"
-function Books_genre_taxonomy() {
+function books_genre_taxonomy() {
  
   $labels = array(
     'name' => 'Genres',
@@ -415,11 +415,11 @@ function Books_genre_taxonomy() {
   ));
 }
 
-add_action( 'init', 'Books_genre_taxonomy' );
+add_action( 'init', 'books_genre_taxonomy' );
 
 
 // create a custom taxonomy "Publisher"
-function Books_publisher_taxonomy() {
+function books_publisher_taxonomy() {
  
     $labels = array(
       'name' => 'Pulishers',
@@ -445,4 +445,4 @@ function Books_publisher_taxonomy() {
     ));
   }
   
-  add_action( 'init', 'Books_publisher_taxonomy' );
+  add_action( 'init', 'books_publisher_taxonomy' );

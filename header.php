@@ -1,30 +1,38 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
-    <head>
 
-        <title><?php my_title(); ?> &mdash; <?php bloginfo( 'name' ) ?></title>
-        <meta charset="UTF-8">
+<head>
 
-        <?php wp_head(); ?>
+    <title><?php my_title(); ?> &mdash; <?php bloginfo('name') ?></title>
+    <meta charset="UTF-8">
 
-    </head>
-    <body <?php body_class( 'myclass' ); ?>>
+    <?php wp_head(); ?>
 
-        <header>
-            <div class="header-container">
-                <div class="description">
-                <h1><?php bloginfo( 'name' ); ?> &mdash; <?php bloginfo( 'description' );?></h1>
-                </div>
-                <?php
-                    wp_nav_menu( array(
-                        'theme_location' => 'main-navigation',
-                        'container'      => 'div', 
-                        'menu_class'     => 'main-navigation', 
-                        'menu_id'        => 'main-navigation'
-                    ));
-                ?>
-            </div>
-        </header>
+</head>
 
-        <div class="main-container">
-            <main>
+<body <?php body_class('myclass'); ?>>
+
+    <header>
+        <div class="header-container">
+            <a class="header-logo" href="<?php echo get_home_url(); ?>"><?php
+                                                    $custom_logo_id = get_theme_mod('custom_logo');
+                                                    $image = wp_get_attachment_image_src($custom_logo_id, 'full');
+                                                    ?>
+                <img src="<?php echo $image[0]; ?>" alt="Logo"></a>
+
+            <!-- <a href="<?php echo get_home_url(); ?>"><h1><?php bloginfo('name'); ?> &mdash; <?php bloginfo('description'); ?></h1></a> -->
+            
+            <?php
+            wp_nav_menu(array(
+                'theme_location' => 'main-navigation',
+                'container'      => 'div',
+                'menu_class'     => 'main-navigation',
+                'menu_id'        => 'main-navigation'
+            ));
+            ?>
+        </div>
+        <div class="search-form"><?php get_search_form(); ?></div>
+    </header>
+
+    <div class="main-container">
+        <main>

@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-INDEX
 <h1><?php wp_title(''); ?></h1>
 
 <!-- The Loop -->

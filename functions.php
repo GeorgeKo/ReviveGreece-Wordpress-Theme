@@ -469,3 +469,14 @@ function custom_taxonomy_flush_rewrite()
     global $wp_rewrite;
     $wp_rewrite->flush_rules();
 }
+
+
+function tags_add_custom_types( $query ) {
+    if( is_tag() && $query->is_main_query() ) {
+
+        // this gets all post types:
+        $post_types = get_post_types();
+        $query->set( 'post_type', $post_types );
+    }
+}
+add_filter( 'pre_get_posts', 'tags_add_custom_types' );

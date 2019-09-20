@@ -1,7 +1,5 @@
     
-            </main>
-
-<!-- <?php get_sidebar(); ?> -->
+</main>
 
 </div>
 

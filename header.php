@@ -19,8 +19,6 @@
                                                     $image = wp_get_attachment_image_src($custom_logo_id, 'full');
                                                     ?>
                 <img src="<?php echo $image[0]; ?>" alt="Logo"></a>
-
-            <!-- <a href="<?php echo get_home_url(); ?>"><h1><?php bloginfo('name'); ?> &mdash; <?php bloginfo('description'); ?></h1></a> -->
             
             <?php
             wp_nav_menu(array(

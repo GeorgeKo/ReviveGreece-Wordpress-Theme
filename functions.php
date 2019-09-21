@@ -480,3 +480,16 @@ function tags_add_custom_types( $query ) {
     }
 }
 add_filter( 'pre_get_posts', 'tags_add_custom_types' );
+
+
+
+// Add custom post type in search. Saddly meta content is not included (yet)
+add_filter( 'pre_get_posts', 'cpt_search' );
+function cpt_search( $query ) {
+	
+    if ( $query->is_search ) {
+	$query->set( 'post_type', array( 'post', 'books', 'page' ) );
+    }
+    
+    return $query;
+}

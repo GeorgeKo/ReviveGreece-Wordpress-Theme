@@ -1,2 +1,5 @@
-# ReviveGreece-Wordpress-Theme
-One of the subjects given as a Final Assignment for the "Extended introduction to web development" Seminar from ReviveGreece.
+# ReviveGreece-WordPress-Theme
+
+My solution for the final assignment of the "Extended Introduction to Web Development" seminar from [ReviveGreece](https://revivegreece.org/).
+
+Η λύση για το θέμα "Wordpress (Εκδοχή Β)" του 

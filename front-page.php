@@ -16,7 +16,8 @@ get_header();
     <!-- End Of Loop -->
 
 </section>
-<aside id="side-left"><?php dynamic_sidebar('sidebar-1'); ?></aside>
-<aside id="side-right"><?php dynamic_sidebar('sidebar-2'); ?></aside>
-
+<section id="side">
+    <aside id="side-left"><?php dynamic_sidebar('sidebar-1'); ?></aside>
+    <aside id="side-right"><?php dynamic_sidebar('sidebar-2'); ?></aside>
+</section>
 <?php get_footer(); ?>

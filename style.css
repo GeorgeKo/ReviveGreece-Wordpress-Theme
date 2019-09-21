@@ -9,25 +9,72 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
+
+/* Table of Contents
+*  1. Global rules.
+*  2. Front Page rules
+*  3. Book Page rules
+*/
+
+
+/**** Global rules ****/
+
 @import url('https://fonts.googleapis.com/css?family=Advent+Pro:400,600&display=swap&subset=greek');
 :root {
     /* paletton triad-color on #725858 */
+    --super-light-green: #BCC7A5;
     --light-green: #899276;
     --med-green: #363c2a;
     --dark-green: #313c1b;
     --very-light-brown: #c9adad;
     --mid-brown: #725858;
     --dark-brown: #402d2d;
+    --mid-grey: #6E6E6E;
+    --super-dark-grey: #121212;
 }
 
 body {
     margin: 0;
     font-family: 'Advent Pro', sans-serif;
+    font-size: 100%;
+}
+
+a{
+    color: #ffffff;
+}
+
+li{
+    list-style: none;
+}
+
+h1{
+    font-size: 2.5em;
+    margin-bottom: 5%;
+}
+
+h2{
+    font-size: 2em;
+}
+
+h3{
+    font-size: 1.5em;
+}
+
+
+.page-container {
+    width: 100%;
+    min-height: 99vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
 }
 
 header {
     display: flex;
     flex-wrap: wrap;
+    background-color: var(--light-green);
+    padding: 0 10%;
 }
 
 .header-container {
@@ -64,7 +111,7 @@ header {
     margin: .5%;
     padding: 10px;
     min-width: 18%;
-    background-color: #899276;
+    background-color: var(--dark-green);
 }
 
 .main-navigation .menu-item a {
@@ -84,4 +131,99 @@ header {
 
 .search-form {
     margin-left: auto;
+}
+
+.main-container{
+    width: 80%;
+    margin: auto;
+    padding: 2% 0;
+}
+
+.main-container, .main-container a {
+    color: var(--super-dark-grey);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+footer{
+    padding: 2% 10%;
+    margin-top: auto;
+    background-color: var(--mid-grey);
+    color: #ffffff
+}
+
+.footer-navigation ul{
+}
+
+.footer-navigation ul li{
+    margin: 0 1%;
+    padding: 1%;
+}
+
+.footer-copyright{
+    text-align: center;
+}
+
+/**** *** ****/
+
+
+/**** Front Page rules ****/
+
+.home main{
+    display: flex;
+}
+
+.home main section{
+    padding: 0 1%;
+}
+
+.home #welcome-text{
+    width: 80%;
+}
+
+.home #side{
+    background-color: var(--super-light-green);
+}
+
+.home #side aside{
+    padding: 1% 0;
+}
+
+
+.home .main-container article{
+    text-align: center;
+}
+
+.home .main-container img{
+    width: 50%;
+    height: auto;
+    margin: auto;
+}
+
+/**** *** ****/
+
+
+/**** Book page rules ****/
+
+.single-books .content{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.single-books .content .book-title{
+    width: 100%;
+}
+
+.single-books .content .book-cover{
+    width: 30%;
+}
+
+.single-books .content .book-cover img{
+    width: 100%;
+}
+
+.single-books .content main{
+    width: 65%;
+    margin-left: 3%;
 }

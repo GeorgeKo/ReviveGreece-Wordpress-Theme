@@ -1,22 +1,22 @@
-    
-</main>
+        
+            </main>
 
-</div>
+            </div>
 
-<footer>
-<div class="footer-container">
-    <?php
-        wp_nav_menu( array(
-            'theme_location' => 'footer-navigation',
-            'container'      => 'div', 
-            'menu_class'     => 'footer-navigation', 
-            'menu_id'        => 'footer-navigation'
-        ));
-    ?>
-</div>
-</footer>
+            <footer>
+                <div class="footer-container">
+                    <?php
+                        wp_nav_menu( array(
+                            'theme_location' => 'footer-navigation',
+                            'container'      => 'div', 
+                            'menu_class'     => 'footer-navigation', 
+                            'menu_id'        => 'footer-navigation'
+                        ));
+                    ?>
+                </div>
+            </footer>
 
-<?php wp_footer(); ?>
-
-</body>
+            <?php wp_footer(); ?>
+        </div> <!--page-container-->
+    </body>
 </html>

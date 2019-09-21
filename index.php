@@ -5,7 +5,7 @@
 <?php if ( have_posts() ) : ?>
     <?php while( have_posts() ) : ?>
         <?php the_post(); ?>
-        <article class="content">
+        <article class="post">
             <h2><?php the_title(); ?></h2>
             <p class="date">
                 <?php the_time('Y M d'); ?>

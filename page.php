@@ -3,7 +3,7 @@
 <?php if (have_posts()) : ?>
     <?php while (have_posts()) : ?>
         <?php the_post(); ?>
-        <article class="content">            
+        <article class="post">            
             <?php if (has_post_thumbnail()) : ?>
                 <img class="post-img" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_post_thumbnail_caption(); ?>">
             <?php endif; ?>
